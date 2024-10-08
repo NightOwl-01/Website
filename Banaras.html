@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
- 
+  <style>.pp-VVK333ZY7339G{text-align:center;border:none;border-radius:1.5rem;min-width:11.625rem;padding:0 2rem;height:3.125rem;font-weight:bold;background-color:#000000;color:#ffffff;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1.125rem;line-height:1.5rem;cursor:pointer;}</style>
   <link rel="stylesheet" href="css/product.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -23,11 +23,11 @@
         </div>
         <div class="nav-links" id="nav-links">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">About Us</a></li> 
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#" class="register-btn">Register</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html">Products</a></li>
+                <li><a href="./index.html">About Us</a></li> 
+                <li><a href="./index.html">Blogs</a></li>
+                <li><a href="./index.html" class="register-btn">Register</a></li>
             </ul>
         </div>
     </nav>
@@ -36,7 +36,7 @@
         <div class="container mx-auto flex flex-col md:flex-row px-4">
           <div class="w-full md:w-1/2 pr-0 md:pr-10 mb-8 md:mb-0">
             <div class="relative mb-4">
-              <img src="./image/Ts-Eras/main.png" alt="Main Product Image" class="w-full h-auto md:h-[550px] object-cover rounded-lg">
+              <img src="./image/Banaras/main.png" alt="Main Product Image" class="w-full h-auto md:h-[550px] object-cover rounded-lg">
               <div class="absolute top-1/2 left-2 transform -translate-y-1/2 arrow" id="prev">
                 &#9664;
               </div>
@@ -45,17 +45,17 @@
               </div>
             </div>
             <div class="flex justify-between overflow-x-auto">
-              <img src="./image/Ts-Eras/1.png" alt="Thumbnail 1" class="thumbnail mr-2 rounded">
-              <img src="./image/Ts-Eras/2.png" alt="Thumbnail 2" class="thumbnail mr-2 rounded">
-              <img src="./image/Ts-Eras/3.png" alt="Thumbnail 3" class="thumbnail mr-2 rounded">
-              <img src="./image/Ts-Eras/4.png" alt="Thumbnail 4" class="thumbnail mr-2 rounded">
+              <img src="./image//Banaras/1.png" alt="Thumbnail 1" class="thumbnail mr-2 rounded">
+              <img src="./image/Banaras/2.png" alt="Thumbnail 2" class="thumbnail mr-2 rounded">
+              <img src="./image/Banaras/3.png" alt="Thumbnail 3" class="thumbnail mr-2 rounded">
+              <img src="./image/Banaras/4.png" alt="Thumbnail 4" class="thumbnail mr-2 rounded">
 
-              <img src="./image/Ts-Eras/5.png" alt="Thumbnail 5" class="thumbnail rounded">
+              <img src="./image/Banaras/5.png" alt="Thumbnail 5" class="thumbnail rounded">
             </div>
           </div>
           <div class="w-full md:w-1/2">
-            <h1 class="text-3xl md:text-4xl font-bold mb-2">Relive the Magic of the Taylor Swift<br>Eras Tour - Album Collage<br>Bookmarks</h1>
-            <p class="text-4xl md:text-6xl font-bold text-black mb-4" id="price">$9.99</p>
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">Carry a Piece of Banaras with You <br> Handcrafted Varanasi Art <br>Bookmarks</h1>
+            <p class="text-4xl md:text-6xl font-bold text-black mb-4" id="price">$3.99</p>
             <p class="text-sm text-gray-600 mb-4">by NightOwl</p>
 
             <div class="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-4 mb-6">
@@ -71,34 +71,35 @@
                   </select>
                 </div>
               
-                <button id="rzp-button1" class="btn btn-outline-dark btn-lg">
-                    <i class="fas fa-money-bill"></i>Buy with Razorpay
-                </button>
-              
-              
-                <button id="paypal-button" class="bg-blue-600 text-white py-2 px-4 rounded w-full md:w-auto">
-                  Buy with PayPal
-                </button>
-              </div>
+                <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_P6WUTJaf0gybhY" async> </script> </form>
+                <form action="https://www.paypal.com/ncp/payment/BPURRA7M7WD6N" method="post" target="_top" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                    <input class="pp-BPURRA7M7WD6N" type="submit" value="Buy Now" />
+                    <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+                    <section> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+                  </form>  
+            </div>
               
               
               <div id="paypal-button-container"></div>
 
             <div class="border p-4 bg-white details-box rounded-lg">
               <h2 class="font-bold mb-2">Details</h2>
-              <p>Capture the unforgettable memories of the Taylor Swift Eras Tour with our specially designed album collage bookmarks.</p>
-              <p class="mt-2">Each bookmark recreates era tour magic based on her outfit album-wise, allowing you to relive the magic of her presence every time you open your book.</p>
-              <p class="mt-2">Bookmarks include various designs inspired by different albums and eras.</p>
-              <p class="mt-2"><span class="font-bold">10 8.2 X 2.75 inches</span> Eras tour album based outfits collages bookmarks creating a magical book reading session every time you come back to turn a page.</p>
+              <p>Set of 10 cards ( 5 DIY easy to assemble high-quality cards + 5 tassel attachable customise it with your favourite tassel )</p>
+              
+              <p class="mt-2">Immerse yourself in the magic of Varanasi with our exclusive handcrafted bookmarks. Each piece captures the essence of Banaras, from its serene ghats to the vibrant streets, allowing you to carry a piece of this sacred city in your books.</p>
+              <p class="font-bold mb-2"> 2 x 5.7 inches length size 3 images on a single page</p>
+              <p class="font-bold mb-2">2.9 x 8.5-inch size 2 images on a single page</p>
+              <p>page size - A4, 300 dpi high quality,  pdf format</p>
               <p class="mt-2">Features:</p>
               <ul class="list-disc list-inside mt-1">
-                <li>High quality: Original, high quality & unique designs created just for you.</li>
-                <li>Includes a tassel version: Allows you to customize and add tassels to your favorite bookmarks.</li>
-                <li>Iconic Designs: Detailed attention to pick outfits she wore while performing songs from her albums.</li>
-                <li>Get involved in creating your favorite bookmarks: Easy to print, double pages included, easy to use.</li>
-                <li>Perfect Gift: Ideal for music lovers and avid bookaholics.</li>
+                <li>Authentic Artistry: Intricate designs inspired by Varanasi’s rich heritage.</li>
+                <li>High-Quality Craftsmanship: Durable, printable with vivid colours.</li>
+                <li>Unique  Each bookmark is a one-of-a-kind piece.</li>
+                <li>Perfect Gift  Ideal for book lovers and admirers of Indian culture.</li>
+                <li>Cultural Connection: A meaningful connection to the spiritual heart of India.</li>
+                <li>Set Includes: 5 unique Varanasi-themed bookmarks + Tassel versions of all 5 bookmarks </li>
               </ul>
-              <p class="mt-2">Capture the magic of the tour in every page you turn. Order your set of DIY bookmarks today and keep those cherished memories alive!</p>
+              <p class="mt-2">Experience the charm of Banaras in every page. Order now and carry a piece of Varanasi with you wherever you go.</p>
             </div>
           </div>
         </div>
@@ -108,24 +109,24 @@
         <div class="container mx-auto px-4">
           <h2 class="text-3xl font-bold mb-6">You may also like</h2>
           <div class="flex flex-col md:flex-row justify-between">
-            <a href="product1.html" class="product-card w-full md:w-1/3 mx-0 md:mx-2 mb-4 md:mb-0 bg-white rounded-lg overflow-hidden shadow-lg">
-              <img src="./image/Ts-Eras/1.png" alt="Taylor Swift Album" class="w-full h-48 object-cover">
+            <a href="Ts-ErasTour.html" class="product-card w-full md:w-1/3 mx-0 md:mx-2 mb-4 md:mb-0 bg-white rounded-lg overflow-hidden shadow-lg">
+              <img src="./image/Ts-Tour/main1.png" alt="Taylor Swift Album" class="w-full h-48 object-cover">
               <div class="p-4">
-                <p class="text-lg font-bold">$5.50</p>
+                <p class="text-lg font-bold">$9.99</p>
                 <p class="text-sm">Taylor Swift Album</p>
               </div>
             </a>
-            <a href="product1.html" class="product-card w-full md:w-1/3 mx-0 md:mx-2 mb-4 md:mb-0 bg-white rounded-lg overflow-hidden shadow-lg">
-              <img src="./image/Ts-Eras/2.png" alt="Taylor Swift Album" class="w-full h-48 object-cover">
+            <a href="Ts-Illustrations.html" class="product-card w-full md:w-1/3 mx-0 md:mx-2 mb-4 md:mb-0 bg-white rounded-lg overflow-hidden shadow-lg">
+              <img src="./image/Ts-illustrations/main.png" alt="Taylor Swift Album" class="w-full h-48 object-cover">
               <div class="p-4">
-                <p class="text-lg font-bold">$5.50</p>
+                <p class="text-lg font-bold">$2.99</p>
                 <p class="text-sm">Taylor Swift Album</p>
               </div>
             </a>
-            <a href="product1.html" class="product-card w-full md:w-1/3 mx-0 md:mx-2 bg-white rounded-lg overflow-hidden shadow-lg">
-              <img src="./image/Ts-Eras/3.png" alt="Taylor Swift Album" class="w-full h-48 object-cover">
+            <a href="Ts-outfit.html" class="product-card w-full md:w-1/3 mx-0 md:mx-2 bg-white rounded-lg overflow-hidden shadow-lg">
+              <img src="./image/Ts-Eras/main.png" alt="Taylor Swift Album" class="w-full h-48 object-cover">
               <div class="p-4">
-                <p class="text-lg font-bold">$5.50</p>
+                <p class="text-lg font-bold">$4.99</p>
                 <p class="text-sm">Taylor Swift Album</p>
               </div>
             </a>

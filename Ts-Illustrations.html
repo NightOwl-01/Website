@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Product Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
+  <style>.pp-VVK333ZY7339G{text-align:center;border:none;border-radius:1.5rem;min-width:11.625rem;padding:0 2rem;height:3.125rem;font-weight:bold;background-color:#000000;color:#ffffff;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1.125rem;line-height:1.5rem;cursor:pointer;}</style>
+  <link rel="stylesheet" href="css/product.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="image/logo.png" style="background-color: whitesmoke;" />
+        </div>
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation" data-open="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./index.html">Products</a></li>
+              <li><a href="./index.html">About Us</a></li> 
+              <li><a href="./index.html">Blogs</a></li>
+              <li><a href="./index.html" class="register-btn">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="product-section" class="bg-[#fff5ec] py-10 mt-20">
+        <div class="container mx-auto flex flex-col md:flex-row px-4">
+          <div class="w-full md:w-1/2 pr-0 md:pr-10 mb-8 md:mb-0">
+            <div class="relative mb-4">
+              <img src="./image/Ts-illustrations/main.png" alt="Main Product Image" class="w-full h-auto md:h-[550px] object-cover rounded-lg">
+              <div class="absolute top-1/2 left-2 transform -translate-y-1/2 arrow" id="prev">
+                &#9664;
+              </div>
+              <div class="absolute top-1/2 right-2 transform -translate-y-1/2 arrow" id="next">
+                &#9654;
+              </div>
+            </div>
+            <div class="flex justify-between overflow-x-auto">
+              <img src="./image/Ts-illustrations/1.png" alt="Thumbnail 1" class="thumbnail mr-2 rounded">
+              <img src="./image/Ts-illustrations/2.png" alt="Thumbnail 2" class="thumbnail mr-2 rounded">
+              <img src="./image/Ts-illustrations/3.png" alt="Thumbnail 3" class="thumbnail mr-2 rounded">
+              <img src="./image/Ts-illustrations/4.png" alt="Thumbnail 4" class="thumbnail mr-2 rounded">
+
+              <img src="./image/Ts-illustrations/5.png" alt="Thumbnail 5" class="thumbnail rounded">
+            </div>
+          </div>
+          <div class="w-full md:w-1/2">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">Taylor Swift illustrations bookmarks </h1>
+            <p class="text-4xl md:text-6xl font-bold text-black mb-4" id="price">$2.99</p>
+            <p class="text-sm text-gray-600 mb-4">by NightOwl</p>
+
+            <div class="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-4 mb-6">
+              
+                <div>
+                  <label for="quantity">Quantity:</label>
+                  <select id="quantity" class="border p-2 w-20" onchange="updatePrice()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+                <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_P6WRYqvWmQlCem" async> </script> </form>
+                <form action="https://www.paypal.com/ncp/payment/VVK333ZY7339G" method="post" target="_top" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                  <input class="pp-VVK333ZY7339G" type="submit" value="Buy Now" />
+                  <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+                  <section> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+                </form>
+              </div>
+              
+              
+              <div id="paypal-button-container"></div>
+
+            <div class="border p-4 bg-white details-box rounded-lg">
+              <h2 class="font-bold mb-2">Details</h2>
+              <p>Capture Taylor Swift's Illustrations and bookmarks
+
+                Each features unique artwork from Taylor's most loved albums & looks, letting you carry fond memories of Taylor's music.</p>
+              <p class="mt-2">Each bookmark recreates era tour magic based on her outfit album-wise, allowing you to relive the magic of her presence every time you open your book.</p>
+              <p class="mt-2">Set Includes: 5 uniquely Illustrated Taylor Swift Illustrations by fans reshaped into bookmarks for you.</p>
+              <p class="mt-2"><span class="font-bold">Dimensions: 4.5 x 2.5 inches</span></p>
+              <p class="mt-2">Features:</p>
+              <ul class="list-disc list-inside mt-1">
+                <li>High quality: Original, high quality & unique designs created just for you.</li>
+                <li>Includes a tassel version: Allows you to customize and add tassels to your favorite bookmarks.</li>
+                <li>Iconic Designs: Detailed attention to pick outfits she wore while performing songs from her albums.</li>
+                <li>Get involved in creating your favorite bookmarks: Easy to print, double pages included, easy to use.</li>
+                <li>Perfect Gift: Ideal for music lovers and avid bookaholics.</li>
+              </ul>
+              <p class="mt-2">Capture the magic of the tour in every page you turn. Order your set of DIY bookmarks today and keep those cherished memories alive!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="you-may-also-like" class="py-10 youmayalsolike-bg">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold mb-6">You may also like</h2>
+          <div class="flex flex-col md:flex-row justify-between">
+            <a href="Ts-ErasTour.html" class="product-card w-full md:w-1/3 mx-0 md:mx-2 mb-4 md:mb-0 bg-white rounded-lg overflow-hidden shadow-lg">
+              <img src="./image/Ts-Eras/main.png" alt="Taylor Swift Album" class="w-full h-48 object-cover">
+              <div class="p-4">
+                <p class="text-lg font-bold">$9.99</p>
+                <p class="text-sm">Taylor Swift Album</p>
+              </div>
+            </a>
+            <a href="Banaras.html" class="product-card w-full md:w-1/3 mx-0 md:mx-2 mb-4 md:mb-0 bg-white rounded-lg overflow-hidden shadow-lg">
+              <img src="./image/Banaras/main.png" alt="Taylor Swift Album" class="w-full h-48 object-cover">
+              <div class="p-4">
+                <p class="text-lg font-bold">$3.99</p>
+                <p class="text-sm">Taylor Swift Album</p>
+              </div>
+            </a>
+            <a href="Ts-outfit.html" class="product-card w-full md:w-1/3 mx-0 md:mx-2 bg-white rounded-lg overflow-hidden shadow-lg">
+              <img src="./image/Ts-Tour/main.png" alt="Taylor Swift Album" class="w-full h-48 object-cover">
+              <div class="p-4">
+                <p class="text-lg font-bold">$4.99</p>
+                <p class="text-sm">Taylor Swift Album</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+  <script>
+    const mainImage = document.querySelector('.relative img');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    let currentImageIndex = 0;
+
+    function updateMainImage(index) {
+      mainImage.src = thumbnails[index].src;
+    }
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentImageIndex = (currentImageIndex === 0) ? thumbnails.length - 1 : currentImageIndex - 1;
+      updateMainImage(currentImageIndex);
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      currentImageIndex = (currentImageIndex === thumbnails.length - 1) ? 0 : currentImageIndex + 1;
+      updateMainImage(currentImageIndex);
+    });
+
+    thumbnails.forEach((thumbnail, index) => {
+      thumbnail.addEventListener('click', () => {
+        currentImageIndex = index;
+        updateMainImage(currentImageIndex);
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+
+            hamburger.addEventListener('click', function () {
+                const isOpen = hamburger.getAttribute('data-open') === 'true';
+                hamburger.setAttribute('data-open', !isOpen);
+                navLinks.classList.toggle('active'); 
+            });
+        });
+  </script>
+  <script src="./js/payment-script.js"></script>
+</body>
+</html>
