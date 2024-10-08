@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Owl</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel&family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="particles-section" style="height: 90vh;">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="image/logo.png" style="background-color: whitesmoke;" />
+            </div>
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation" data-open="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About Us</a></li> 
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#" class="register-btn">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="starry-background" style="background-image: url('./image/stary.png');"></div>
+
+        <div class="particles-content">
+            <h1>Night Owl</h1>
+            <p>Innocence it was, he was midnight, and I was sunshine<br>After that incident we never met again</p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="text-content">
+            <h1>Infusing quality time <br>into your Daily</h1>
+        </div>
+        <div class="image-content">
+            <img src="image/image.jpeg" alt="Quality Time">
+        </div>
+    </div>
+    
+    
+    
+    <div class="products-section">
+    <h1>Products</h1>
+    <div class="product-grid">
+        <div class="product-card" data-product="bookmark-set1">
+            <img src="image/Ts-Eras/main.png" alt="Bookmark Set 1">
+            <div class="product-details">
+                <div>
+                    <div class="price">$24.99</div> 
+                    <h2>Taylor Swift Eras Tour Album Collage</h2> 
+                </div>
+                <a href="/productpage" class="buy-now-link">
+                    <button class="buy-now-btn">Know More</button> 
+                </a>
+            </div>
+        </div>
+        <div class="product-card" data-product="bookmark-set1">
+            <img src="image/Ts-Tour/main.png" alt="Bookmark Set 1">
+            <div class="product-details">
+                <div>
+                    <div class="price">$29.99</div> 
+                    <h2>Taylor Swift Eras Tour Outfit</h2> 
+                </div>
+                <a href="/productpage" class="buy-now-link">
+                    <button class="buy-now-btn">Know More</button> 
+                </a>
+            </div>
+        </div>
+        <div class="product-card" data-product="bookmark-set1">
+            <img src="image/Ts-illustrations/main.png" alt="Bookmark Set 1">
+            <div class="product-details">
+                <div>
+                    <div class="price">$19.99</div> 
+                    <h2>Taylor Swift Illustrations</h2> 
+                </div>
+                <a href="/productpage" class="buy-now-link">
+                    <button class="buy-now-btn">Know More</button>
+                </a>
+            </div>
+        </div>
+        <div class="product-card" data-product="bookmark-set1">
+            <img src="image/Banaras/main.png" alt="Bookmark Set 1">
+            <div class="product-details">
+                <div>
+                    <div class="price">$34.99</div>
+                    <h2>Carry a Piece of Banaras with You – Handcrafted Varanasi Art</h2> 
+                </div>
+                <a href="/productpage" class="buy-now-link">
+                    <button class="buy-now-btn">Know More</button> 
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <div class="story-section">
+        <div class="story-content">
+            <h1>Our Story</h1>
+            <div class="triangle-shape"></div>
+        </div>
+    </div>
+
+    <div class="newsletter-section">
+        <h2>Follow the latest trends</h2>
+        <p>With our daily newsletter</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="you@example.com" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (){
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+
+            hamburger.addEventListener('click', function () {
+                const isOpen = hamburger.getAttribute('data-open') === 'true';
+                hamburger.setAttribute('data-open', !isOpen);
+                navLinks.classList.toggle('active'); 
+            });
+        });
+       
+    </script>
+</body>
+</html>
