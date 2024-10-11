@@ -36,9 +36,9 @@
             <div class="nav-links" id="nav-links">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">About Us</a></li> 
-                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#pro">Products</a></li>
+                    <li><a href="#about">About Us</a></li> 
+                    <li><a href="#blog">Blogs</a></li>
                     <li><a href="#" class="register-btn">Register</a></li>
                 </ul>
             </div>
@@ -52,7 +52,7 @@
         </div>
     </div>
 
-    <div class="content-section">
+    <div class="content-section" id="about">
         <div class="text-content">
             <h1>Infusing quality time <br>into your Daily</h1>
         </div>
@@ -63,7 +63,7 @@
     
     
     
-    <div class="products-section">
+    <div class="products-section" id="pro">
     <h1>Products</h1>
     <div class="product-grid">
         <div class="product-card" data-product="bookmark-set1">
@@ -117,18 +117,25 @@
     </div>
 </div>
 
-    
-
-    <div class="story-section">
-        <div class="story-content">
-            <h1>Our Story</h1>
-            <div class="triangle-shape"></div>
-           
+<div class="story-section" id="blog">
+    <div class="story-content">
+        <h1>Our Story</h1>
+        <div class="triangle-shape"></div>
         
+        <div class="slider-container">
+            <div class="slider" id="mediumSlider">
+                <!-- Dynamic articles will be injected here -->
+            </div>
         </div>
-    </div>
 
-    <div class="newsletter-section">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+</div>
+
+
+
+    <div class="newsletter-section" id="footer">
         <h2>Follow the latest trends</h2>
         <p>With our daily newsletter</p>
         <form class="newsletter-form">
@@ -148,7 +155,67 @@
                 navLinks.classList.toggle('active'); 
             });
         });
-       
+        
+
+        const mediumArticle = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nightowlmystery00";
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetch(mediumArticle)
+        .then(res => res.json())
+        .then(data => {
+            const articles = data.items;
+            const slider = document.getElementById('mediumSlider');
+            
+            // Create a slider with a minimum of 4 cards visible
+            articles.slice(0, 8).forEach((article, index) => {
+                const articleDiv = document.createElement('div');
+                articleDiv.classList.add('article');
+                
+                const description = article.description.replace(/<[^>]*>/g, '');  // Strip HTML tags from description
+                const shortDescription = description.length > 100 ? description.substring(0, 100) + '...' : description;
+                
+                const thumbnail = article.thumbnail ? article.thumbnail : "https://cdn-images-1.medium.com/fit/c/150/150/1*pfqEMGZVqsQCj3P_mXsFlA.png";  // Default image if no thumbnail
+
+                articleDiv.innerHTML = `
+                    <div class="article-card">
+                        <img src="${thumbnail}" alt="Article Image" class="article-image">
+                        <div class="article-header">
+                            <h3>${article.title}</h3>
+                        </div>
+                        <p class="article-description">${shortDescription}</p>
+                        <p>${article.pubDate}</p>
+                        <a href="${article.link}" target="_blank">Read more</a>
+                    </div>
+                `;
+
+                slider.appendChild(articleDiv);
+            });
+
+            // Show the first 4 cards initially
+            moveSlide(0);
+        });
+});
+
+let currentSlide = 0;
+
+function moveSlide(n) {
+    const slider = document.getElementById('mediumSlider');
+    const articles = slider.getElementsByClassName('article');
+    const articlesToShow = 4; // Display 4 cards at a time
+
+    currentSlide = (currentSlide + n + articles.length) % articles.length;
+    
+    for (let i = 0; i < articles.length; i++) {
+        articles[i].style.display = 'none'; // Hide all articles initially
+    }
+
+    // Show the next set of 4 articles
+    for (let i = currentSlide; i < currentSlide + articlesToShow; i++) {
+        if (articles[i % articles.length]) {
+            articles[i % articles.length].style.display = 'block';
+        }
+    }
+}
     </script>
 </body>
 </html>

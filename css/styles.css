@@ -438,3 +438,110 @@ body, html {
 .newsletter-form button:hover {
     background-color: #000; 
 }
+
+.story-content {
+    width: 90%;
+    position: relative;
+}
+
+.slider-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease-in-out;
+}
+
+.article {
+    width: 24%; /* Ensure 4 cards fit within the container */
+    display: none;
+    background-color: #fff;
+    padding: 15px;
+    margin: 0 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px; /* Adjust margin from the top */
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-image {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; /* Round the top corners */
+    margin-bottom: 10px;
+}
+
+.article-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.article h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.article-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.article p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.article a {
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev {
+    left: -30px; /* Adjust distance from the left */
+}
+
+.next {
+    right: -30px; /* Adjust distance from the right */
+}
+
+@media (max-width: 768px) {
+    .article {
+        width: 100%;
+    }
+
+    .article-card {
+        text-align: center;
+    }
+
+    .article-image {
+        height: 25vh;
+    }
+}
